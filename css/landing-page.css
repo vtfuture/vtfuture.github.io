@@ -74,14 +74,16 @@ h3 {
     width: 152px;
     display: block;
     top: -20px; }
-  h3.ft-right:after {
-    border: 10px solid transparent;
-    border-left: 10px solid #1dbfee;
-    bottom: 50%;
-    left: auto;
-    right: -18px;
-    margin-left: 0;
-    margin-bottom: -10px; }
+  h3.ft-right {
+    margin-bottom: 30px; }
+    h3.ft-right:after {
+      border: 10px solid transparent;
+      border-left: 10px solid #1dbfee;
+      bottom: 50%;
+      left: auto;
+      right: -18px;
+      margin-left: 0;
+      margin-bottom: -10px; }
 
 .custom-list {
   list-style-image: url("../img/list-item.png"); }
@@ -136,7 +138,7 @@ h3 {
     .info-content .info-item.green {
       color: #4eaf8e; }
   .info-content p {
-    padding: 0 15px 0 30px;
+    padding: 0 0 0 30px;
     overflow: hidden;
     border-left: 1px solid #b5b5b5; }
 
@@ -209,6 +211,13 @@ h3 {
       line-height: 60px; }
 
 @media (max-width: 768px) {
-  .parallax .parallax-text {
-    left: 0;
-    margin-left: auto; } }
+  .parallax {
+    height: 470px; }
+    .parallax .parallax-image {
+      background-position: center -100px; }
+    .parallax .parallax-text {
+      top: 100px;
+      left: 0;
+      margin-left: auto; }
+      .parallax .parallax-text h2 {
+        font-size: 50px; } }
