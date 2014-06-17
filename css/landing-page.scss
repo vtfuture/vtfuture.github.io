@@ -1,6 +1,9 @@
+
+
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #676767;
+	-webkit-font-smoothing: antialiased;
 }
 
 .navbar {
@@ -13,6 +16,12 @@ body {
 	}
 	.navbar-nav, .navbar-toggle {
 		margin-top: 30px;
+	}
+	.navbar-nav li a {
+		padding-bottom: 5px;
+		&:hover {
+			border-bottom: 3px solid #68b0c7;
+		}
 	}
 }
 
@@ -80,7 +89,7 @@ h3 {
 	}
 	&.ft-center {
 		margin: 0 auto;
-		width: 132px;
+		width: 152px;
 		display: block;
 		top: -20px;
 	}
@@ -259,5 +268,12 @@ h3 {
 		p {
 			line-height: 60px;
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	.parallax .parallax-text {
+		left: 0;
+		margin-left: auto;
 	}
 }

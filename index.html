@@ -18,10 +18,13 @@
 
     <!-- Add custom CSS here -->
     <link href="css/landing-page.css" rel="stylesheet">
+	
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
 
 </head>
 
-<body>
+<body id="home">
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -38,11 +41,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
+                    <li><a href="#home">Home</a>
                     </li>
-                    <li><a href="#services">Services</a>
+                    <li><a href="#wedo">What we do</a>
                     </li>
-                    <li><a href="#contact">Contact</a>
+                    <li><a href="#work">How we work</a>
+                    </li>
+					<li><a href="#team">Team</a>
+                    </li>
+					<li><a href="#blog">Blog</a>
+                    </li>
+					<li><a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -55,13 +64,12 @@
 	<div class="parallax">
 		<div class="parallax-text">
 			<h2>Ideas for the future</h2>
-			<p>We think, design and develop for the user. From the first analysis, trough well thought UX,<br />
-			using latest technologies and to the final product we make impossible possible.  </p>
+			<p>We think, design and develop for the user. Using well-thought-out UX and the latest technology, from our first meeting to the final product, we make the impossible possible.</p>
 		</div>
 		<div class="parallax-image"></div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="wedo">
 		<h3 class="ft-header">What we do</h3>
 		<div class="row">
         	<div class="col-md-4">
@@ -143,8 +151,8 @@
 		
 	</div>
 	
-	<div class="content-background">
-		<h3 class="ft-header ft-center">What we do</h3>
+	<div class="content-background" id="work">
+		<h3 class="ft-header ft-center">How we work</h3>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -153,28 +161,37 @@
 				<div class="col-md-4 top-30">
 					<div class="info-content">
         				<span class="info-item red">1</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget dolor quam. Fusce eget eros felis. Pellentesque mattis ultricies diam a rutrum</p>
+                        <p><strong>Tell us about your idea</strong>. What are your business needs? What are your users needs? What is your vision of the completed product? It's all right if you don't know all the answers we can help you find them.</p>
         			</div>
 					<div class="info-content">
         				<span class="info-item pink">2</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget dolor quam. Fusce eget eros felis. Pellentesque mattis ultricies diam a rutrum</p>
+                        <p><strong>A glimpse into the future</strong>. See what your product will look like, on any device. Even more, now you have the chance to get the first feedback from your users.</p>
         			</div>
 				</div>
 				<div class="col-md-4 top-30">
 					<div class="info-content">
         				<span class="info-item purple">3</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget dolor quam. Fusce eget eros felis. Pellentesque mattis ultricies diam a rutrum</p>
+                        <p><strong>Bringing your idea to life</strong>. Using the adequate technology for the job we ensure that we keep velocity high and cost of ownership low. We architect systems built to scale and expand alongside your business.</p>
         			</div>
 					<div class="info-content">
         				<span class="info-item green">4</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget dolor quam. Fusce eget eros felis. Pellentesque mattis ultricies diam a rutrum</p>
+                        <p><strong>Deployment</strong>. We can deploy anywhere - be it on premises or in the cloud, the choice is yours. We take pride in our work and we ensure that the final product is what you’ve imagined it to be.</p>
         			</div>
+				</div>
+				
+				<div class="col-md-8 pull-right">
+					<div class="info-content">
+        				<span class="info-item">5</span>
+                        <p><strong>It doesn’t need to end here</strong>. As your business grows, we’ll be right by your side to ensure that you can accomplish everything you imagine. Have a new idea? Tell us more.
+						<br />We can use both open source software or established enterprise products. We’ll find a solution that fits your existing infrastructure and your budget.
+						<br />Unit and integration tests ensure that we can quickly and safely add new features to your product.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="container team">
+	<div class="container team" id="team">
 		<div class="row">
 			<div class="col-md-2">
 				<h3 class="ft-right">Meet the team</h3>
@@ -228,7 +245,7 @@
 		</div>
 	</div>
 	
-	<div class="container blog">
+	<div class="container blog" id="blog">
 		<h3 class="ft-header ft-center">Blog</h3>
 		<div class="row">
 			<div class="col-md-4">
@@ -262,7 +279,7 @@
 		</div>
 	</div>
 	
-	<div class="footer">
+	<div class="footer" id="contact">
 		<div class="container"><h3>Contact</h3></div>
 		<div class="map">
 			<div class="gmap">
@@ -321,8 +338,8 @@
 		$(function () {
 			var map = new GMaps({
 			el: "#map",
-			lat: 44.430257,
-			lng: 26.083796,
+			lat: 44.4085629,
+			lng: 26.0955065,
 				  zoom: 15, 
 				  zoomControl : true,
 				  zoomControlOpt: {
@@ -353,12 +370,14 @@
 			  map.setStyle("map_style");
 
 			  map.addMarker({
-				lat: 44.430257,
-				lng: 26.083796,
+				lat: 44.4100575,
+				lng: 26.101783,
 				icon: "img/marker.png"
 			  });
 		});
 	</script>
+	
+	<script src="js/smoothscroll.js"></script>
 
 </body>
 
