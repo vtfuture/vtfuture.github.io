@@ -158,8 +158,8 @@ h3 {
       color: #333; }
   .blog h4 span {
     background: #d7d7d7;
-    padding: 5px 10px;
-    display: inline-block; }
+    line-height: 23px;
+    box-shadow: 5px 0 0 #d7d7d7, -5px 0 0 #d7d7d7; }
 
 .footer {
   background: #1dbfee; }
