@@ -245,7 +245,8 @@ h3 {
     height: auto; }
 
   .parallax {
-    height: 500px; }
+    height: 500px;
+    margin-bottom: -100px; }
     .parallax .parallax-image {
       background-position: center -100px;
       position: relative; }
