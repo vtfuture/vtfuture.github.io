@@ -9,13 +9,15 @@ body {
 .navbar {
 	&.navbar-default {
 		background-color: #fff;
-		border-bottom: 1px solid #4a4a4a;
+		border-bottom: 1px solid #E9E9E9;
 	}
 	.navbar-brand {
 		height: auto;
+		padding: 10px 15px;
 	}
 	.navbar-nav, .navbar-toggle {
-		margin-top: 30px;
+		margin-top: 17px;
+		margin-bottom: 0;
 	}
 	.navbar-nav li a {
 		padding-bottom: 5px;
@@ -55,7 +57,8 @@ body {
 		background-image: url(../img/parralax-bg.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-attachment: fixed;
+		position: fixed;
+		//background-attachment: fixed;
 		background-position: center center;
 		width: 100%;
 		height: 100%;
@@ -63,6 +66,11 @@ body {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 	}
+}
+
+.site-content {
+	position: relative; 
+	background: #fff;
 }
 
 h3 {
@@ -267,10 +275,7 @@ h3 {
 	.copy {
 		background: #4a4a4a;
 		color: #fff;
-		padding: 15px 0 0;
-		p {
-			line-height: 60px;
-		}
+		padding: 15px 0 5px;
 	}
 }
 
@@ -310,13 +315,19 @@ h3 {
 }
 
 @media (max-width: 768px) {
+	.navbar-brand img {
+		width: 60px;
+		height: auto;
+	}
+	
 	.parallax {
-		height: 470px;
+		height: 500px;
 		.parallax-image {
 			background-position: center -100px;
+			position: relative;
 		}
 		.parallax-text {
-			top: 100px;
+			top: 60px;
 			left: 0;
 			margin-left: auto;
 			h2 {
