@@ -56,9 +56,9 @@
 
 <body id="home">
 
-    <nav class="navbar navbar-default navbar-fixed-top" data-scroll-header role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" data-scroll-header>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -582,8 +582,20 @@
 				icon: "img/marker.png"
 			  });
 			  
+			  
 			  //init scroll
-			  smoothScroll.init();
+			  smoothScroll.init();		
+			  
+			  	  jQuery('.navbar-nav a').on('click',function(e){
+			  var $toggleBtn = jQuery('.navbar-toggle[data-target=".navbar-ex1-collapse"]');
+			  
+				if($toggleBtn.is(':visible')){
+					jQuery('.navbar-ex1-collapse').collapse('hide');
+					e.stopPropagation();
+					e.preventDefault();
+				}
+			  });
+			    
 		});	
 		
 	</script>
