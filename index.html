@@ -133,10 +133,10 @@
         	</div>			    
     	</div>
 		<div class="see-all">
-			<a href="#">Find out more <span class="glyphicon glyphicon-chevron-down"></span></a>
+			<a href="#" id="feature-expander">Find out more <span class="glyphicon glyphicon-chevron-down"></span></a>
 		</div>
 		
-		<div class="feature-expanded" id="featured">
+		<div class="feature-expanded" id="featured" style="display: none">
 			<div class="feature">
 				<i class="fa fa-cogs feature-icon"></i>
 				<div class="ft-content">
@@ -179,7 +179,7 @@
 					<h4>Consulting services</h4>
 					<p>
 						Our best people are ready to help you and your business grow, giving you the proper tools you need for both technology and human resources.<br /><br />
-						If you are building your own software, both our technical and business expertise can help you grow your business, build better software that lasts for a long time.<br /><br />
+						If you are building your own software, both our technical and business expertise can help you grow your business and build better software that lasts for a long time.<br /><br />
 						Here are some topics our experts can assists you with:<br />
 						<ul>
 							<li>.NET and JavaScript development: we can help your developers be more efficient using our knowledge and experience with various frameworks based on those technologies</li>
@@ -655,6 +655,20 @@
 					jQuery('.navbar-ex1-collapse').collapse('hide');
 					e.stopPropagation();
 					e.preventDefault();
+				}
+			  });
+			  jQuery('#feature-expander').on('click', function (e) {
+				e.preventDefault();
+				var el = jQuery("#featured");
+				if(el.is(":visible")) {
+					jQuery(this).children("span").removeClass("glyphicon-chevron-up")
+					jQuery(this).children("span").addClass("glyphicon-chevron-down")
+					el.slideUp();
+				}
+				else {
+					jQuery(this).children("span").removeClass("glyphicon-chevron-down")
+					jQuery(this).children("span").addClass("glyphicon-chevron-up")
+					el.slideDown();
 				}
 			  });
 			    
