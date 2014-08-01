@@ -126,7 +126,6 @@ h3 {
 
 .feature{
 	overflow: hidden;
-	margin-bottom: 10px;
 	padding: 15px 15px 10px;
 	.feature-icon {
 		float: left;
@@ -134,12 +133,40 @@ h3 {
 		color: #1dbfee;
 		font-size: 35px;
 		text-align: center;
+		min-width: 58px;
 	}
 	.ft-content {
 		padding: 0 15px;
 		overflow: hidden;
 	}	
 } 
+.feature-expanded {
+	background: #eee;
+	p {
+		text-align: justify;
+	}
+}
+
+.see-all {
+	padding: 10px 0;
+	margin-bottom: 30px;
+	a {
+		padding: 10px;
+		background: #6751a2;
+		color: #fff;	
+		font-size: 16px;	
+		&:hover {
+			background: darken(#6751a2, 10%);
+			text-decoration: none;
+		}
+		.glyphicon {
+			color: #1dbfee;
+			vertical-align: middle;
+			padding-left: 5px;
+		}
+	}
+	
+}
 
 .carousel-description {
 	padding: 10px;
@@ -336,5 +363,8 @@ h3 {
 				font-size: 50px;
 			}
 		}
+	}
+	.feature-expanded .feature .feature-icon {
+		float: none;
 	}
 }

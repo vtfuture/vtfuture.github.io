@@ -99,17 +99,38 @@ h3 {
 
 .feature {
   overflow: hidden;
-  margin-bottom: 10px;
   padding: 15px 15px 10px; }
   .feature .feature-icon {
     float: left;
     padding: 10px;
     color: #1dbfee;
     font-size: 35px;
-    text-align: center; }
+    text-align: center;
+    min-width: 58px; }
   .feature .ft-content {
     padding: 0 15px;
     overflow: hidden; }
+
+.feature-expanded {
+  background: #eee; }
+  .feature-expanded p {
+    text-align: justify; }
+
+.see-all {
+  padding: 10px 0;
+  margin-bottom: 30px; }
+  .see-all a {
+    padding: 10px;
+    background: #6751a2;
+    color: #fff;
+    font-size: 16px; }
+    .see-all a:hover {
+      background: #514080;
+      text-decoration: none; }
+    .see-all a .glyphicon {
+      color: #1dbfee;
+      vertical-align: middle;
+      padding-left: 5px; }
 
 .carousel-description {
   padding: 10px;
@@ -256,4 +277,7 @@ h3 {
       left: 0;
       margin-left: auto; }
       .parallax .parallax-text h2 {
-        font-size: 50px; } }
+        font-size: 50px; }
+
+  .feature-expanded .feature .feature-icon {
+    float: none; } }
