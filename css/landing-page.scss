@@ -139,9 +139,43 @@ h3 {
 		padding: 0 15px;
 		overflow: hidden;
 	}	
+	&.large {
+		.ft-content { overflow: visible; }
+		.feature-icon {
+			float: none;
+			padding: 0 10px 0 0;
+			vertical-align: middle;
+			font-size: 24px;
+			min-width: 10px;
+		}
+		h4 {
+			background: #6751a2;
+			color: #fff;
+			font-weight: normal;
+			padding: 10px;
+			margin: 0 0 20px 0;
+			display: inline-block;
+			position: relative;
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-top: 10px solid #6751a2;
+				position: absolute;
+				bottom: -18px;
+				left: 50%;
+				margin-left: -10px;
+			}
+		}
+	}
 } 
 .feature-expanded {
-	background: #eee;
+	border: 1px solid #ddd;
+	margin-top: 20px;
+	margin-bottom: -21px;
+	padding: 15px 0;
+	
 	p {
 		text-align: justify;
 	}

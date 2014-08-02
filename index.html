@@ -11,7 +11,7 @@
     <meta name="description" content="We think, design and develop for the user. Using well-thought-out UX and the latest technology, from our first meeting to the final product, we make the impossible possible.">
     <meta name="keywords" content="Cloud, UX, custom software, consulting, asp.net, c#, responsive, visual studio, github, sql, design, startup, front-end, server">
 	<meta name="author" content="VeriTech">
-    <meta name="robots" content="noindex">
+ 
     <title>VeriTech</title>
 	
 	<meta name="twitter:card" content="summary">
@@ -110,7 +110,8 @@
         			<div class="ft-content">
         				<h4>Custom software</h4>
                         <p>We are here to provide the best solution that suits your needs, no matter how small or big your business is. Our team is ready to take a challenge.</p>
-        			</div>
+						<a href="#" class="feature-expander">Find out more &rarr;</a>
+					</div>
         		</div>	
         	</div>
         	<div class="col-md-4">
@@ -119,7 +120,8 @@
         			<div class="ft-content">
         				<h4>Cloud integration</h4>
                         <p>We offer support for integration with any major cloud platform, making sure that everything is optimized for speed and stability.</p>
-        			</div>
+						<a href="#" class="feature-expander">Find out more &rarr;</a>
+					</div>
         		</div>	
         	</div>
         	<div class="col-md-4">
@@ -128,19 +130,16 @@
         			<div class="ft-content">
         				<h4>Mobile apps</h4>
                         <p>We develop products for any platform, be it iOS, Windows Phone or Android, so you can have access to your business whenever you need it the most.</p>
-        			</div>
+						<a href="#" class="feature-expander">Find out more &rarr;</a>
+					</div>
         		</div>	
         	</div>			    
     	</div>
-		<div class="see-all">
-			<a href="#" id="feature-expander">Find out more <span class="glyphicon glyphicon-chevron-down"></span></a>
-		</div>
 		
 		<div class="feature-expanded" id="featured" style="display: none">
-			<div class="feature">
-				<i class="fa fa-cogs feature-icon"></i>
+			<div class="feature large">				
 				<div class="ft-content">
-					<h4>Custom software</h4>
+					<h4><i class="fa fa-cogs feature-icon"></i> Custom software</h4>
 					<p>
 						No matter if you're a small or a large company, just starting out or have been in business for decades, we can help you improve your day-to-day operations, customer outreach, or even make possible whole new business models using custom software developed with your business needs in mind.<br /><br />
 						Using Agile, we develop in small increments and release a new functioning version of the software more often so that you can get feedback from your employees or your customers before the project is finished, making sure that the final product perfectly matches the needs of its users.<br /><br />
@@ -149,10 +148,10 @@
 					</p>
 				</div>
 			</div>
-			<div class="feature">
-				<i class="fa fa-cloud feature-icon"></i>
+			<div class="feature large">
+
 				<div class="ft-content">
-					<h4>Cloud integration</h4>
+					<h4><i class="fa fa-cloud feature-icon"></i> Cloud integration</h4>
 					<p>
 						The development of software is not the only cost associated with it. It must also be maintained and hosted, and we understand that this is an additional expense that you need to keep in mind.<br /><br />
 						If you host your app on-premises you have more control, and in some scenarios it might prove to be the most cost-efficient way. It does, however, mean that you need to have people able to manage and maintain the infrastructure required.<br /><br />
@@ -162,10 +161,9 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="feature col-md-6">
-				<i class="fa fa-tablet feature-icon"></i>
+			<div class="feature large col-md-6">
 				<div class="ft-content">
-					<h4>Mobile apps</h4>
+					<h4><i class="fa fa-tablet feature-icon"></i> Mobile apps</h4>
 					<p>
 						The number of potential clients that have a mobile device is, without doubt, too large to be ignored and it's only growing. Be it a smartphone or a tablet, you want to be able to reach those customers in a way that offers for them the best possible experience.<br /><br />
 						Building a good mobile application is not just about taking your existing application and making it work well / look good in a mobile setting. You can discover whole new business opportunities that emerge from the more social nature of the devices. Anticipate your customer's needs and be the first to provide solutions to his problems, wherever he is.<br /><br />
@@ -173,10 +171,9 @@
 					</p>
 				</div>
 			</div>
-			<div class="feature col-md-6">
-				<i class="fa fa-users feature-icon"></i>
+			<div class="feature large col-md-6">				
 				<div class="ft-content">
-					<h4>Consulting services</h4>
+					<h4><i class="fa fa-users feature-icon"></i> Consulting services</h4>
 					<p>
 						Our best people are ready to help you and your business grow, giving you the proper tools you need for both technology and human resources.<br /><br />
 						If you are building your own software, both our technical and business expertise can help you grow your business and build better software that lasts for a long time.<br /><br />
@@ -658,17 +655,13 @@
 					e.preventDefault();
 				}
 			  });
-			  jQuery('#feature-expander').on('click', function (e) {
+			  jQuery('.feature-expander').on('click', function (e) {
 				e.preventDefault();
 				var el = jQuery("#featured");
 				if(el.is(":visible")) {
-					jQuery(this).children("span").removeClass("glyphicon-chevron-up")
-					jQuery(this).children("span").addClass("glyphicon-chevron-down")
 					el.slideUp();
 				}
 				else {
-					jQuery(this).children("span").removeClass("glyphicon-chevron-down")
-					jQuery(this).children("span").addClass("glyphicon-chevron-up")
 					el.slideDown();
 				}
 			  });
