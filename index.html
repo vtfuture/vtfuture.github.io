@@ -110,7 +110,7 @@
         			<div class="ft-content">
         				<h4>Custom software</h4>
                         <p>We are here to provide the best solution that suits your needs, no matter how small or big your business is. Our team is ready to take a challenge.</p>
-						<a href="#" class="feature-expander">Find out more &rarr;</a>
+						<a href="#" class="feature-expander" data-target="js-customSoftware">Find out more &rarr;</a>
 					</div>
         		</div>	
         	</div>
@@ -120,7 +120,7 @@
         			<div class="ft-content">
         				<h4>Cloud integration</h4>
                         <p>We offer support for integration with any major cloud platform, making sure that everything is optimized for speed and stability.</p>
-						<a href="#" class="feature-expander">Find out more &rarr;</a>
+						<a href="#" class="feature-expander" data-target="js-cloudIntegration">Find out more &rarr;</a>
 					</div>
         		</div>	
         	</div>
@@ -130,7 +130,7 @@
         			<div class="ft-content">
         				<h4>Mobile apps</h4>
                         <p>We develop products for any platform, be it iOS, Windows Phone or Android, so you can have access to your business whenever you need it the most.</p>
-						<a href="#" class="feature-expander">Find out more &rarr;</a>
+						<a href="#" class="feature-expander" data-target="js-mobileApps">Find out more &rarr;</a>
 					</div>
         		</div>	
         	</div>			    
@@ -138,7 +138,7 @@
 		
 		<div class="feature-expanded" id="featured" style="display: none">
 			<div class="feature large">				
-				<div class="ft-content">
+				<div class="ft-content" id="js-customSoftware">
 					<h4><i class="fa fa-cogs feature-icon"></i> Custom software</h4>
 					<p>
 						No matter if you're a small or a large company, just starting out or have been in business for decades, we can help you improve your day-to-day operations, customer outreach, or even make possible whole new business models using custom software developed with your business needs in mind.<br /><br />
@@ -150,7 +150,7 @@
 			</div>
 			<div class="feature large">
 
-				<div class="ft-content">
+				<div class="ft-content" id="js-cloudIntegration">
 					<h4><i class="fa fa-cloud feature-icon"></i> Cloud integration</h4>
 					<p>
 						The development of software is not the only cost associated with it. It must also be maintained and hosted, and we understand that this is an additional expense that you need to keep in mind.<br /><br />
@@ -162,7 +162,7 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="feature large col-md-6">
-				<div class="ft-content">
+				<div class="ft-content" id="js-mobileApps">
 					<h4><i class="fa fa-tablet feature-icon"></i> Mobile apps</h4>
 					<p>
 						The number of potential clients that have a mobile device is, without doubt, too large to be ignored and it's only growing. Be it a smartphone or a tablet, you want to be able to reach those customers in a way that offers for them the best possible experience.<br /><br />
@@ -655,15 +655,22 @@
 					e.preventDefault();
 				}
 			  });
+			  
+			  
 			  jQuery('.feature-expander').on('click', function (e) {
 				e.preventDefault();
-				var el = jQuery("#featured");
+				var el = jQuery("#featured"),
+					$target = jQuery(e.currentTarget);							
+				
 				if(el.is(":visible")) {
 					el.slideUp();
 				}
 				else {
-					el.slideDown();
+					el.slideDown(function(){					
+						smoothScroll.animateScroll(null, '#' + $target.data('target'));
+					});
 				}
+				
 			  });
 			    
 		});	
