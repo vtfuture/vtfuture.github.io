@@ -664,7 +664,7 @@
 					$target = jQuery(e.currentTarget);							
 				
 				if(el.is(":visible")) {
-					el.slideUp();
+					smoothScroll.animateScroll(null, '#' + $target.data('target'));
 				}
 				else {
 					el.slideDown(function(){					
