@@ -3,6 +3,12 @@ body {
   color: #676767;
   -webkit-font-smoothing: antialiased; }
 
+.panel, .btn {
+  border-radius: 0; }
+
+img {
+  max-width: 100%; }
+
 .navbar.navbar-default {
   background-color: #fff;
   border-bottom: 1px solid #E9E9E9; }
@@ -110,32 +116,6 @@ h3 {
   .feature .ft-content {
     padding: 0 15px;
     overflow: hidden; }
-  .feature.large .ft-content {
-    overflow: visible; }
-  .feature.large .feature-icon {
-    float: none;
-    padding: 0 10px 0 0;
-    vertical-align: middle;
-    font-size: 24px;
-    min-width: 10px; }
-  .feature.large h4 {
-    background: #6751a2;
-    color: #fff;
-    font-weight: normal;
-    padding: 10px;
-    margin: 0 0 20px 0;
-    display: inline-block;
-    position: relative; }
-    .feature.large h4:after {
-      content: "";
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top: 10px solid #6751a2;
-      position: absolute;
-      bottom: -18px;
-      left: 50%;
-      margin-left: -10px; }
 
 .feature-expanded {
   border: 1px solid #ddd;
@@ -204,6 +184,45 @@ h3 {
   background: url(../img/bg-team.png) right -90px no-repeat; }
   .team .media {
     padding-bottom: 30px; }
+
+.projects {
+  margin-top: 40px;
+  padding-bottom: 10px; }
+  .projects .projects-item {
+    margin-top: 10px; }
+  .projects .thumbnail {
+    border-radius: 0;
+    padding: 0;
+    border: 0; }
+  .projects .caption {
+    color: #676767;
+    padding: 10px 0;
+    text-align: justify; }
+  .projects .thumb-link {
+    position: relative;
+    display: block; }
+    .projects .thumb-link span {
+      background: #666;
+      color: #fff;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      padding: 5px;
+      font-size: 11px;
+      z-index: 2; }
+    .projects .thumb-link img {
+      max-width: 100%;
+      display: block; }
+    .projects .thumb-link:hover:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.2;
+      z-index: 1; }
 
 .blog {
   margin-top: 40px;
@@ -305,8 +324,18 @@ h3 {
       top: 60px;
       left: 0;
       margin-left: auto; }
-      .parallax .parallax-text h2 {
+      .parallax .parallax-text h1 {
         font-size: 50px; }
 
+  .ft-left {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto; }
+
   .feature-expanded .feature .feature-icon {
-    float: none; } }
+    float: none; }
+
+  .team {
+    padding-top: 0; } }
+
+/*# sourceMappingURL=landing-page.css.map */
