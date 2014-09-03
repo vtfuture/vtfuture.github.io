@@ -122,8 +122,13 @@ h3 {
   margin-top: 20px;
   margin-bottom: -21px;
   padding: 15px 0; }
+  .feature-expanded .feature-icon {
+    padding-top: 0; }
   .feature-expanded p {
-    text-align: justify; }
+    text-align: justify;
+    padding-left: 60px; }
+  .feature-expanded ul {
+    padding-left: 90px; }
 
 .see-all {
   padding: 10px 0;
@@ -333,7 +338,12 @@ h3 {
     margin: 0 auto; }
 
   .feature-expanded .feature .feature-icon {
-    float: none; }
+    float: none;
+    padding: 10px 10px 10px 0; }
+  .feature-expanded .feature p {
+    padding-left: 0; }
+  .feature-expanded .feature ul {
+    padding-left: 30px; }
 
   .team {
     padding-top: 0; } }
