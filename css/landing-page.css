@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   color: #676767;
   -webkit-font-smoothing: antialiased; }
 
@@ -38,7 +39,8 @@ img {
     text-align: center; }
     .parallax .parallax-text h1 {
       color: #fff;
-      font-size: 70px; }
+      font-size: 70px;
+      font-weight: 400; }
     .parallax .parallax-text p {
       background: rgba(29, 191, 238, 0.5);
       color: #fff;
@@ -170,7 +172,7 @@ h3 {
     text-align: center;
     margin-top: -10px;
     margin-right: -20px;
-    font-weight: bold; }
+    font-weight: 700; }
     .info-content .info-item.red {
       color: #b31e1e; }
     .info-content .info-item.pink {
@@ -347,6 +349,11 @@ h3 {
     padding-left: 30px; }
 
   .team {
-    padding-top: 0; } }
+    padding-top: 0; }
+
+  .footer .map {
+    display: none; }
+  .footer .contact-info {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=landing-page.css.map */
