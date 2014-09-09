@@ -682,11 +682,13 @@
 			  smoothScroll.init();		
 			  
 			  //Menu
-			  jQuery('.navbar-nav a').on('click',function(e){
+			  jQuery('.navbar-nav > a').on('click',function(e){
 				var $toggleBtn = jQuery('.navbar-toggle[data-target=".navbar-ex1-collapse"]');
 			  
 				if($toggleBtn.is(':visible')){
-					jQuery('.navbar-ex1-collapse').collapse('hide');					
+					jQuery('.navbar-ex1-collapse').collapse('hide');
+					e.stopPropagation();
+					e.preventDefault();
 				}
 			  });
 			  
