@@ -231,6 +231,61 @@ h3 {
       opacity: 0.2;
       z-index: 1; }
 
+.single-project {
+  background: #321a32 url(../img/bg-pattern.jpg) 0 0 repeat;
+  height: 380px;
+  margin-bottom: 50px;
+  padding-right: 30px;
+  border-radius: 3px; }
+  .single-project .single-project-item {
+    padding: 35px 30px 60px;
+    background: url(../img/feature-img.png) right bottom no-repeat;
+    color: #fff; }
+    .single-project .single-project-item .btn {
+      border-radius: 30px; }
+    .single-project .single-project-item h2 {
+      font-size: 34px;
+      font-weight: bold;
+      margin: 0 0 40px; }
+    .single-project .single-project-item h4 {
+      font-size: 24px;
+      margin-bottom: 30px; }
+    .single-project .single-project-item p {
+      max-width: 480px;
+      font-size: 17px;
+      line-height: 30px; }
+    .single-project .single-project-item .call-to-action {
+      margin-top: 40px; }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .single-project .single-project-item {
+        padding: 30px 500px 145px 30px;
+        background-position: right 30px; }
+        .single-project .single-project-item h2 {
+          margin: 0 0 30px; }
+        .single-project .single-project-item .call-to-action {
+          margin-top: 20px; } }
+    @media (max-width: 991px) {
+      .single-project .single-project-item {
+        background-size: 250px;
+        background-position: right bottom;
+        padding: 30px 30px 110px; }
+        .single-project .single-project-item p {
+          max-width: 100%; }
+        .single-project .single-project-item h2 {
+          margin: 0 0 30px; } }
+    @media (max-width: 736px) {
+      .single-project .single-project-item {
+        background-position: center 96%;
+        padding: 30px 15px 200px; }
+        .single-project .single-project-item .call-to-action {
+          margin: 20px 0; } }
+  @media (max-width: 736px) {
+    .single-project {
+      height: auto;
+      margin: 20px 0 0;
+      padding: 0;
+      text-align: center; } }
+
 .blog {
   margin-top: 40px;
   padding-bottom: 30px;
